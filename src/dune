@@ -1,0 +1,5 @@
+(executable
+ (name relp)
+ (public_name ferroc)
+ (modules stdout lexer relp)
+ (libraries))

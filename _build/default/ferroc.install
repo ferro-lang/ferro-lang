@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/ferroc/META"
+  "_build/install/default/lib/ferroc/dune-package"
+]
+bin: [
+  "_build/install/default/bin/ferroc"
+]
+doc: [
+  "_build/install/default/doc/ferroc/README.md"
+]

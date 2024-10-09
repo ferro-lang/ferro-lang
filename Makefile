@@ -1,13 +1,10 @@
-all: clear ferro-build run clean
+all: clear ferroc-build run
 
 clear:
 	- @clear
 
-ferro-build: 
-	- @ocamlc -o ferro src/relp.ml
+ferroc-build: 
+	- @dune build
 
 run:
-	- @./ferro
-
-clean:
-	- @rm -f ferro src/*.cmi src/*.cmo
+	- @dune exec ./src/relp.exe

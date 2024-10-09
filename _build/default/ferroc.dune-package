@@ -1,0 +1,5 @@
+(lang dune 3.16)
+(name ferroc)
+(version 0.1)
+(sections (lib .) (bin ../../bin) (doc ../../doc/ferroc))
+(files (lib (META dune-package)) (bin (ferroc)) (doc (README.md)))
