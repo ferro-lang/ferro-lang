@@ -1,4 +1,4 @@
-# dune build
+# dune exec ./src/relp.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /Users/gurvirsinghbaraich/.cache/dune/db
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /Users/gurvirsinghbaraich/.opam/default/bin/ocamlc.opt -config > /var/folders/lc/0gcr2bqs3b14stm32yv292xw0000gn/T/dune_a25dbc_output
+$ /Users/gurvirsinghbaraich/.opam/default/bin/ocamlc.opt -config > /var/folders/lc/0gcr2bqs3b14stm32yv292xw0000gn/T/dune_c016a4_output

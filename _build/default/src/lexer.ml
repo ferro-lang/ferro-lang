@@ -9,6 +9,8 @@ type t =
 | Integer of int
 | Float of float
 | Operation of operator
+| LParan
+| RParan
 
 let string_of_operator (operator: operator): string =
   match operator with
@@ -40,6 +42,8 @@ let lexer (source: string): 'a list =
       List.rev tokens
     else
       match source.[position] with
+      | '(' -> helper (position + 1) (LParan :: tokens)
+      | ')' -> helper (position + 1) (RParan :: tokens)
       | '+' | '-' | '*' | '/' | '%' as c ->
         helper (position + 1) (Operation (operator_of_char c) :: tokens)
       | '0'..'9' ->
@@ -67,6 +71,8 @@ let print_lexer (tokens: t list): unit =
     | Integer i -> print_string (prefix ^ "Integer(" ^ string_of_int i ^ ")")
     | Float f -> print_string (prefix ^ "Float(" ^ string_of_float f ^ ")")
     | Operation op -> print_string (prefix ^ "Operation(" ^ string_of_operator op ^ ")")
+    | LParan -> print_string (prefix ^ "LParan")
+    | RParan -> print_string (prefix ^ "RParan")
   ) tokens;
   print_newline ()
 
