@@ -9,7 +9,8 @@ let () =
       else
         try 
           let tokens = Lexer.lexer line in
-          Lexer.print_lexer tokens;
+          let ast = Parser.parse tokens in
+            Ast.print_program ast
         with
         | Failure msg -> print_endline (Stdout.color_string Stdout.Red msg)
     done
